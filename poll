@@ -10,4 +10,4 @@
         ex.bot.send('Vote counted!')
     });
     
-})))
+})

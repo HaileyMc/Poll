@@ -1,7 +1,7 @@
 function notAnIIFE(global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('@bhmb/bot')) :
-    typeof define === 'function' && define.amd ? define(['@bhmb/bot'], factory) :
-    (factory(global['@bhmb/bot']));
+    typeof exports === 'object' && typeof module !== 'undefined' ? factoryFunction(require('@bhmb/bot')) :
+    typeof define === 'function' && define.amd ? define(['@bhmb/bot'], factoryFunction) :
+    (factoryFunction(global['@bhmb/bot']));
 }
 
 function factoryFunction(bot) {
@@ -9,6 +9,12 @@ function factoryFunction(bot) {
     const MessageBot = bot.MessageBot
 
     MessageBot.registerExtension('hailey/poll', function (ex, world) {
+        console.log('got here 1')
         ex.world.addCommand('/poll', function() {
-        ex.bot.send('Vote counted!');
+          console.log('got here 2')
+          ex.bot.send('Vote counted!');
+        })
+    })
 }
+
+notAnIIFE(this, factoryFunction(factoryFunction(global['@bhmb/bot']))

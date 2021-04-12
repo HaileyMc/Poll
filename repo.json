@@ -1,0 +1,10 @@
+[
+  {
+    "user": "Hailey",
+    "id": "hailey/poll",
+    "package": "https://haileymc.github.io/Poll/poll.js",
+    "title": "Poll",
+    "description": "Create polls for players in your server to answer",
+    "env": "browser"
+  }
+]

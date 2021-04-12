@@ -7,7 +7,7 @@ function notAnIIFE(global, factory) {
 function factoryFunction(bot) {
     'use strict';
     const MessageBot = bot.MessageBot
-
+    console.log('got here pfft')
     MessageBot.registerExtension('hailey/poll', function (ex, world) {
         console.log('got here 1')
         ex.world.addCommand('/poll', function() {

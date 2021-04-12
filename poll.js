@@ -8,6 +8,6 @@
     MessageBot.registerExtension('hailey/poll', function (ex, world) {
          ex.world.addCommand('/poll', function() {
         ex.bot.send('Vote counted!')
-    });
+    }})
     
-}))
+})

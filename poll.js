@@ -2,6 +2,7 @@ function notAnIIFE(global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factoryFunction(require('@bhmb/bot')) :
     typeof define === 'function' && define.amd ? define(['@bhmb/bot'], factoryFunction) :
     (factoryFunction(global['@bhmb/bot']));
+    console.log('made it here')
 }
 
 function factoryFunction(bot) {
